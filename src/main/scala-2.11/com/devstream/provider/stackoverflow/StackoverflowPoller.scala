@@ -53,9 +53,11 @@ object StackoverflowPoller extends Poller with Logger {
 
   def main(args: Array[String]) {
 
-    val list = pollForUserTimeline("89hKyjDW3MIHIvKGt92g6A))", 1417516662)
+    val list = pollForUserTimeline("Cg*SXTHWW8Nbp7ZT(MiNrw))", 1417516662)
 
-    println(list)
+    val finalList = list.map(StackoverflowEntityTransformer.trasform(_))
+
+    println(finalList)
   }
 
 }
